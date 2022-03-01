@@ -1,12 +1,16 @@
+#include <QApplication>
+
 #include "app.h"
 
-#include <QApplication>
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    App w;
-    w.setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
-    w.show();
-    return a.exec();
+    QApplication app(argc, argv);
+    App window;
+
+    // Delete titlebar
+    window.setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+
+    window.show();
+    return app.exec();
 }

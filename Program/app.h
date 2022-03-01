@@ -3,12 +3,14 @@
 
 #include <QMainWindow>
 
+
 QT_BEGIN_NAMESPACE
-namespace Ui { class App; }
+namespace Ui {
+    class App;
+}
 QT_END_NAMESPACE
 
-class App : public QMainWindow
-{
+class App : public QMainWindow {
     Q_OBJECT
 
 public:
@@ -21,6 +23,8 @@ private slots:
     void on_minimize_btn_clicked();
 
     void on_install_btn_clicked();
+
+    void on_browse_btn_clicked();
 
 private:
     Ui::App *ui;

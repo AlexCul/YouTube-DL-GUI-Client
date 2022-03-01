@@ -67,7 +67,6 @@
       <string notr="true">QPushButton {
 	background-color: #1793d1;
 	color: white;
-	border: none;
 	border-radius: 0px;
 }
 QPushButton:hover {
@@ -101,7 +100,6 @@ QPushButton:hover {
 	background-color: #1793d1;
 	color: white;
 	border-bottom-left-radius: 15px;
-	border: none;
 }
 QPushButton:hover {
 	background-color: #146ca4;
@@ -111,7 +109,7 @@ QPushButton:hover {
       <string>-</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label">
+    <widget class="QLabel" name="title_lbl">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -166,13 +164,14 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>500</y>
+       <y>490</y>
        <width>350</width>
        <height>30</height>
       </rect>
      </property>
      <property name="styleSheet">
       <string notr="true">QLineEdit {
+	background-color: #555555;
 	border-radius: 0px;
 	border-top-left-radius: 15px;
 	border-bottom-left-radius: 15px;
@@ -183,7 +182,7 @@ QPushButton:hover {
      <property name="geometry">
       <rect>
        <x>370</x>
-       <y>500</y>
+       <y>490</y>
        <width>100</width>
        <height>30</height>
       </rect>
@@ -212,6 +211,125 @@ QPushButton:hover {
      </property>
      <property name="text">
       <string>Install</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="preferences_wdgt" native="true">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>379</y>
+       <width>400</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QWidget {
+	border-radius: 15px;
+	background-color: #353535;
+}</string>
+     </property>
+     <widget class="QLabel" name="path_to_file_lbl">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>180</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Directory for installation to:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="path_to_file_ln_edit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>300</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+	border-radius: 10px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	background-color: #444444;
+}</string>
+      </property>
+      <property name="text">
+       <string>../installed</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="browse_btn">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>30</y>
+        <width>80</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: #1793d1;
+	color: white;
+	border: none;
+	border-radius: 0px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+QPushButton:hover {
+	background-color: #146ca4;
+}</string>
+      </property>
+      <property name="text">
+       <string>Browse...</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>380</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>You can use and relative, and absolute path to directory</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="note_lbl">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>520</y>
+       <width>500</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>P.S. Make sure you wrote the full(with &quot;https://&quot; etc.) link to a video. 
+In other case program will try to install it only from YouTube.</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </widget>
