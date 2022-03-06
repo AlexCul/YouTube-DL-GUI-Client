@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
     QApplication app(argc, argv);
     App window;
 
-    // Delete titlebar
+    // Delete system titlebar
     window.setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
 
     window.show();
